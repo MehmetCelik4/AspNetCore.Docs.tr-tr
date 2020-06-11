@@ -196,13 +196,13 @@ Varolan koda aşağıdaki değişiklikleri yaptınız:
 
 * Her bir eğitmen tarafından taders kurslarını görüntüleyen bir **Kurslar** sütunu eklendi. Daha fazla bilgi için, Razor söz dizimi makalesindeki [açık satır geçişi](xref:mvc/views/razor#explicit-line-transition) bölümüne bakın.
 
-* Seçilen eğitmenin `tr` öğesine dinamik olarak `class="success"` ekleyen kod eklendi. Bu, bir önyükleme sınıfı kullanarak seçili satır için bir arka plan rengi ayarlar.
+* Seçilen eğitmenin `tr` öğesine dinamik olarak `class="table-success"` ekleyen kod eklendi. Bu, bir önyükleme sınıfı kullanarak seçili satır için bir arka plan rengi ayarlar.
 
   ```html
   string selectedRow = "";
   if (item.ID == (int?)ViewData["InstructorID"])
   {
-      selectedRow = "success";
+      selectedRow = "table-success";
   }
   <tr class="@selectedRow">
   ```
